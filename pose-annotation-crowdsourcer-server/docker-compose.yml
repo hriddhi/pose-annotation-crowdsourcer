@@ -1,0 +1,12 @@
+version: "3"
+services:
+  server:
+    platform: linux/amd64
+    container_name: pose-annotation-crowdsourcer-server
+    image: hriddhi/pose-annotation-crowdsourcer-server
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    ports:
+      - "80:8080"
